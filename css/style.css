@@ -1,0 +1,78 @@
+table#board {
+    border-spacing: 3px;
+    background-color: black;
+}
+
+table#board td {
+    background: #3CB371;
+    border: 5px black;
+    padding: 6px;
+}
+
+table#board td.top-right {
+    background: 
+        radial-gradient(circle at top -1px right -1px, transparent 7px, #3CB371 0) top right;
+	background-repeat: no-repeat;
+}
+
+table#board td.top-left {
+    background: 
+        radial-gradient(circle at top -1px left -1px, transparent 7px, #3CB371 0) top left;
+	background-repeat: no-repeat;
+}
+
+table#board td.under-right {
+    background: 
+        radial-gradient(circle at bottom -1px right -1px, transparent 7px, #3CB371 0) bottom right;
+	background-repeat: no-repeat;
+}
+
+table#board td.under-left {
+    background: 
+        radial-gradient(circle at bottom -1px left -1px, transparent 7px, #3CB371 0) bottom left;
+	background-repeat: no-repeat;
+}
+
+div {
+    height: 70px;
+    width: 70px;
+    border: solid 2px transparent;
+}
+
+div.black {
+    border: solid 2px black;
+    background-color: black;
+    border-radius: 50%;
+}
+
+div.white {
+    border: solid 2px black;
+    background-color: white;
+    border-radius: 50%;
+}
+
+div.result {
+    float: left;
+    margin-top: 50px;
+    width: 357.5px;
+    height: 150px;
+    border: 0px;
+}
+
+div.count {
+    float: left;
+    font-size: 40px;
+    text-align: center;
+    margin: 40px;
+    margin-left: 0px;
+}
+
+div.margin {
+    float:left;
+    margin: 40px;
+}
+
+div.selected {
+    outline: solid 7px #1E90FF;
+    outline-offset: -10px;
+}

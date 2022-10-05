@@ -53,12 +53,40 @@ function turn_piece_check() {
 
 // 合計の駒数を数える
 function total_piece_count() {
+    var black_count = 0;
+    var white_count = 0;
 
+    for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col ++) {
+            if (this.target_piece(row, col).className == "black") {
+                black_count += 1;
+            } else if (this.target_piece(row, col).className == "white") {
+                white_count += 1;
+            }
+        }
+    }
+    document.getElementById("black-count").textContent = black_count;
+    document.getElementById("white-count").textContent = white_count;
+
+    return [black_count, white_count];
 }
 
 // 駒の置ける場所を数える
 function count_places() {
-
+    var places = [];
+    for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col++) {
+            if (target_piece(row, col).className == "none") {
+                if (turn_over(row, col, false) != 0) {
+                    places.push([row, col]);
+                }
+            }
+        }
+    }
+    if (places.length == 0) {
+        return false;
+    }
+    return places;
 }
 
 // 白黒を変える
